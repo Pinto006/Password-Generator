@@ -2,7 +2,6 @@ var number = [0,1,2,3,4,5,6,7,8,9];
 var symbol = ["!", "@", "#", "$", "%", "&", "*", "?"];
 var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var characterLength = 8;
 var choice = [];
 
 // Assignment Code
@@ -13,12 +12,30 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
+  var criteria = prompts();
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
+
+function getRandomNum() {
+  var index = Math.floor(Math.random() *number.length);
+}
+
+function getRandomSymbol() {
+  var index = Math.floor(Math.random() *symbol.length);
+}
+
+function getRandomLower() {
+  var index = Math.floor(Math.random() *lowerLetters.length);
+}
+
+function getRandomUpper() {
+  var index = Math.floor(Math.random() *upperLetters.length);
+}
+
 
 function generatePassword() {
   console.log("You clicked the button") // remove later
@@ -46,6 +63,7 @@ function prompts() {
   }
   return true;
 }
+
 
 // Prompt user with password criteria - DONE
 //   password length 8-128 - DONE
