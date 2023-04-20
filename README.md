@@ -24,5 +24,4 @@ Add SCREENSHOT
 
 No License
 
-## Badges
 
