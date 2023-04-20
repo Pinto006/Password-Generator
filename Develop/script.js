@@ -3,6 +3,8 @@ var symbol = ["!", "@", "#", "$", "%", "&", "*", "?"];
 var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var choice = [];
+var finalpass = "";
+var characterLength = 0;
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -13,10 +15,24 @@ generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
   var criteria = prompts();
-  var password = generatePassword();
+if (!criteria) {
+  return 
+}
+  // for (index; conditional; itterator) {
+  //   codeBlock
+  // }
+
+  for (var i = 0; i < characterLength; i++) {
+    var index = Math.floor(Math.random() *choice.length);
+
+
+    finalpass = finalpass + choice[index]
+  }
+
+  // var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = finalpass;
 
 }
 

@@ -1,4 +1,4 @@
-# Password Generator
+# Password Generator WebPage
 
 ## Description
 
@@ -6,7 +6,7 @@ This website will now produce a secure password based on the criteria that the u
 
 ## Installation
 
-Here is the URL for the page: 
+Here is the URL to access the page: 
 
 ## Usage
 
