@@ -1,3 +1,4 @@
+//Variables
 var number = [0,1,2,3,4,5,6,7,8,9];
 var symbol = ["!", "@", "#", "$", "%", "&", "*", "?"];
 var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -9,7 +10,7 @@ var characterLength = 0;
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Add event listener to generate button
+// Start function 'writePassword' when button is clicked. 
 generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
@@ -18,14 +19,10 @@ function writePassword() {
 if (!criteria) {
   return 
 }
-  // for (index; conditional; itterator) {
-  //   codeBlock
-  // }
-
-  for (var i = 0; i < characterLength; i++) {
+  // for loop to randomize the choice array (index; conditional; itterator) {
+  //   codeBlock}
+   for (var i = 0; i < characterLength; i++) {
     var index = Math.floor(Math.random() *choice.length);
-
-
     finalpass = finalpass + choice[index]
   }
 
@@ -35,30 +32,7 @@ if (!criteria) {
   passwordText.value = finalpass;
 
 }
-
-function getRandomNum() {
-  var index = Math.floor(Math.random() *number.length);
-}
-
-function getRandomSymbol() {
-  var index = Math.floor(Math.random() *symbol.length);
-}
-
-function getRandomLower() {
-  var index = Math.floor(Math.random() *lowerLetters.length);
-}
-
-function getRandomUpper() {
-  var index = Math.floor(Math.random() *upperLetters.length);
-}
-
-
-function generatePassword() {
-  console.log("You clicked the button") // remove later
-
-  return "Generated password will appear here"
-}
-
+// function for prompts once the 'generate password button is clicked'
 function prompts() {
   characterLength = parseInt(prompt("Please choose a number between 8 - 128 to decide on the length of your password"));
   if (characterLength < 8 || characterLength > 128) {
@@ -80,12 +54,4 @@ function prompts() {
   return true;
 }
 
-
-// Prompt user with password criteria - DONE
-//   password length 8-128 - DONE
-//   lowercase, uppercase, special character, and numbers - DONE
-// Validate the input
-// generate a password
-
-//Password generates in the pasword window
 
