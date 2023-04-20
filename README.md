@@ -20,7 +20,7 @@ Below are the steps needed to generate a password.
 6. Click 'OK' to include uppercase letters in the password. 
 7. Once you have gone through all the prompts, a password will appear in the window above the 'Generate Password' Button
 
-![Alt text](images/Screenshot.png)
+![Alt Text](Images/Screenshot.png)
 ## License
 
 No License
